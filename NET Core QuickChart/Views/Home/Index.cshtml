@@ -1,0 +1,20 @@
+﻿@model ChartViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4 text-info">Generate Chart Images using QuickChart API</h1>
+    <p class="text-dark display-4">Samples Generated</p>
+
+    <div class="row">
+        @foreach (var image in Model.Charts)
+        {
+            <div class="col-4">
+                <div class="card">
+                    <img class="card-img-top" src="@image.Url" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
